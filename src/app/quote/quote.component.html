@@ -6,14 +6,17 @@
             <ul>
                 <h2 class="text-center">Famous Quotes</h2>
                 <hr>
-                <div *ngFor='let quote of quotes;let i = index'>
-                <li><i class="fas fa-quote-left"></i>
-                    {{quote.name}} <i class="fas fa-quote-right"></i> <br>
-                     due on {{quote.completeDate|date|uppercase}}</li>
-                <button (click)='toggleDetails(i)'>Show More</button>
-                <div *ngIf='quote.showCreator'>
-                    <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
-                </div>
+                <div *ngFor='let quote of quotes;let i = index' class="card">
+                    <li><i class="fas fa-quote-left"></i>
+                        {{quote.name}} <i class="fas fa-quote-right"></i> <br>
+                         due on {{quote.completeDate|date|uppercase}}
+                    </li>
+                    &nbsp;&nbsp;&nbsp;
+                    <button (click)='toggleDetails(i)' class="btn btn-danger">Show More</button>
+                    <br>
+                    <div *ngIf='quote.showCreator'>
+                        <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+                    </div>
                 </div>
             </ul>
         </div>
