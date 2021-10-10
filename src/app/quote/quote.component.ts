@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Quotes } from '../quotes'
+import { Quotes } from '../quote';
 
 
 @Component({
@@ -11,8 +11,8 @@ export class QuoteComponent implements OnInit {
 
   title = 'Quotes';
   quotes: Quotes[] = [
-    new Quotes(1, 'The difference between the novice and the master is that the master has failed more times than the novice has tried.', '_Koro Sensei'),
-    new Quotes(2, 'Try not to become a person of success, but rather try to become a person of value', '_Albert Einstein')
+    new Quotes(1, 'The difference between the novice and the master is that the master has failed more times than the novice has tried.', '_Koro Sensei' ,new Date(2018,3,14)),
+    new Quotes(2, 'Try not to become a person of success, but rather try to become a person of value', '_Albert Einstein' ,new Date(2021,10,10))
   ];
 
   toggleDetails(index:number){
@@ -28,11 +28,17 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
+
+  addNewQuote(quote: Quotes){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    this.quotes.push(quote)
+  }
   constructor() { }
 
   ngOnInit() {
   }
 
+
 }
-// The difference between the novice and the master is that the master has failed more times than the novice has tried.
 
