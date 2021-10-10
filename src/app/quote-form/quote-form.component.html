@@ -16,7 +16,7 @@
         <div class="form-group">
   
             <label for="Name">Name</label>
-            <input type="text" required class="form-control" id="name">
+            <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.yourName" name="yourName" #creator="ngModel" required>
   
         </div>
         <br>

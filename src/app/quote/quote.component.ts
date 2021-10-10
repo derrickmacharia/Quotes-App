@@ -11,8 +11,8 @@ export class QuoteComponent implements OnInit {
 
   title = 'Quotes';
   quotes: Quotes[] = [
-    new Quotes(1, 'The difference between the novice and the master is that the master has failed more times than the novice has tried.', '_Koro Sensei' ,new Date(2018,3,14)),
-    new Quotes(2, 'Try not to become a person of success, but rather try to become a person of value', '_Albert Einstein' ,new Date(2021,10,10))
+    new Quotes(1, 'The difference between the novice and the master is that the master has failed more times than the novice has tried.', 'Koro Sensei' ,'Derrick Macharia' ,new Date(2018,3,14)),
+    new Quotes(2, 'Try not to become a person of success, but rather try to become a person of value', 'Albert Einstein' , 'Ezekiel Kibyego',new Date(2021,10,10))
   ];
 
   toggleDetails(index:number){

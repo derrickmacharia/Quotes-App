@@ -1,5 +1,26 @@
-<p>
-    {{quote.creator}}
-</p>
-<p>{{quote.completeDate|dateCount}} days</p>
-<button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <p>_{{quote.creator}}</p>
+        </div>
+        <div class="col-md-4">
+            <p>Published By:&nbsp;&nbsp;&nbsp; {{quote.yourName}}</p>
+        </div>
+        <div class="col-md-6">
+            <i (click)='likeButtonClick()' class="far fa-grin-alt fa-2x"></i>
+            {{likes}}  &nbsp;&nbsp;&nbsp;
+              <i (click)='dislikeButtonClick()' class="fas fa-angry fa-2x thumb-down"></i>
+            {{dislikes}}
+        </div>
+        <div class="col-md-6">
+            <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
+        </div>
+        <p>{{quote.completeDate|dateCount}} days</p>
+    </div>
+</div>
+
+
+
+
+
+
