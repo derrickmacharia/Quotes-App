@@ -7,13 +7,13 @@
             <p>Published By: {{quote.yourName}}</p>
         </div>
         <div class="col-md-6">
-            <i (click)='likeButtonClick()' class="far fa-grin-alt fa-2x"></i>
+            <i (click)='likeButtonClick()' class="fas fa-smile-beam fa-2x smile"></i>
             {{likes}}  &nbsp;&nbsp;&nbsp;
-              <i (click)='dislikeButtonClick()' class="fas fa-angry fa-2x"></i>
+              <i (click)='dislikeButtonClick()' class="fas fa-angry fa-2x angry"></i>
             {{dislikes}}
         </div>
         <div class="col-md-6">
-            <i (click)= 'quoteDelete(true)' class="fas fa-trash fa-2x " ></i>
+            <i (click)= 'quoteDelete(true)' class="fas fa-trash fa-2x trash" ></i>
         </div>
         <p>{{quote.completeDate|dateCount}} days</p>
     </div>
