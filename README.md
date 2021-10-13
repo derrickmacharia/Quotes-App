@@ -7,7 +7,7 @@ This is an application where the user can read and quote.
 * Inorder to access this website
 * you can git clone or
 * search on website
-* by <a href="https://derrickmacharia.github.io/Quote-App/">Click Here</a>
+* by pressing https://derrickmacharia.github.io/Quotes-App/
 
 This website is fully interactive and available leave a message at the end.
 ## Screenshot of website
